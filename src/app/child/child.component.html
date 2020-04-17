@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h3><b>Child Component Here</b></h3>
+    </div>
+</div>
+<div class="row">
+    <label class="col-xs-12">What do you wanna say?</label>
+    <div class="col-xs-12">
+        <input type="text" style="margin-right: 10px;" [(ngModel)]="childSays">
+        <button 
+            class="btn btn-danger"
+            [disabled]="!childSays"
+            (click)="clearInput()">Clear</button>
+        <p><b>Imma say "{{ childSays }}" to my parent!</b></p>
+        <br>
+        <button 
+            class="btn btn-success"
+            [disabled]="!childSays"
+            (click)="sendToParent()">Send message to ur parent</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <h2 class="col-xs-12">My parent says: {{ receivedParentMessage }}</h2>
+</div>
+
