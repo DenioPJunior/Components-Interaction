@@ -13,7 +13,7 @@ export class ChildComponent implements OnInit {
   @Input() receivedParentMessage: string;
 
   // Send to parent
-  @Output() messageToEmit = new EventEmitter<string>();
+  @Output() messageToEmitToParent = new EventEmitter<string>();
 
   constructor() { }
 
@@ -21,7 +21,7 @@ export class ChildComponent implements OnInit {
   }
 
   sendToParent() {
-    return this.messageToEmit.emit(this.childSays);
+    return this.messageToEmitToParent.emit(this.childSays);
   }
 
   clearInput() {

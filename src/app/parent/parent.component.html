@@ -23,11 +23,11 @@
         </div>
         <hr>
         <div class="row">
-            <h2 class="col-xs-12">And my child says: {{ childSays }}</h2>
+            <h2 class="col-xs-12">My child says: {{ childSays }}</h2>
         </div>
     </div>
     <div class="col-md-6">
-        <app-child [receivedParentMessage]="transmitToChild" (messageToEmit)="getMessage($event)"></app-child>
+        <app-child [receivedParentMessage]="transmitToChild" (messageToEmitToParent)="getMessage($event)"></app-child>
     </div>
 </div>
 
